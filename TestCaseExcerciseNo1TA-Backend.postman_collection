@@ -1,0 +1,1053 @@
+{
+	"info": {
+		"_postman_id": "280be21b-9452-4c85-9462-329cad0465ae",
+		"name": "TA-Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Titles",
+			"item": [
+				{
+					"name": "2.1 postNewTitle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": 210,\n\t\"title\": \"War and Peace\",\n\t\"author\": \"Lew Tołstoj\",\n\t\"year\": 1869\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/titles/",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"titles",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.3.1 postNewEmptyTitle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": 210,\n\t\"title\": \"\",\n\t\"author\": \"John Doe\",\n\t\"year\": 1999\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/titles/",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"titles",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "147",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.3.2 postNewEmptyAuthor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": 210,\n\t\"title\": \"Random Title\",\n\t\"author\": \"\",\n\t\"year\": 1999\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/titles/",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"titles",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "147",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.3.3 postNewEmptyYear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": 210,\n\t\"title\": \"Random Title\",\n\t\"author\": \"John Doe\",\n\t\"year\": \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/titles/",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"titles",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "147",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.2 getTitles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/titles/?userId=210",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"titles",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "210"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.4 editTitle",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": 210,\n\t\"id\": 407,\n\t\"title\": \"Kalarepa\",\n\t\"author\": \"Ann Marchew\",\n\t\"year\": 1008\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/titles/",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"titles",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "147",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.5 deleteTitle",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/titles/?userId=210&id=407",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"titles",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "210"
+								},
+								{
+									"key": "id",
+									"value": "407"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.6 postNewTitlePolish",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": 210,\n\t\"title\": \"Pójdź że, Kiń tę chmurność w głąb czaszy\",\n\t\"author\": \"Żół Śtąźę\",\n\t\"year\": 2000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/titles/",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"titles",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "147",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.7 postNewBadYear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": 210,\n\t\"title\": \"Random Title\",\n\t\"author\": \"John Doe\",\n\t\"year\": 1234567890\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/titles/",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"titles",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "147",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "1.1 postNewUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"login\": \"John Tester\",\n\t\"password\": \"rudy1031\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/user/register",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.2 goodLoginJohnTester",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"login\": \"John Tester\",\n\t\"password\": \"rudy1031\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/user/login",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						},
+						"description": "testing correct login parameters "
+					},
+					"response": []
+				},
+				{
+					"name": "1.12 goodLoginZbigniewTester",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"login\": \"Zbigniew Tester\",\n\t\"password\": \"rudy102\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/user/login",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						},
+						"description": "testing correct login parameters "
+					},
+					"response": []
+				},
+				{
+					"name": "1.2 goodLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"login\": \"goorolx\",\n\t\"password\": \"rudy103\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/user/login",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						},
+						"description": "testing correct login parameters "
+					},
+					"response": []
+				},
+				{
+					"name": "1.3 loginBadLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"login\": \"John Testerx\",\n\t\"password\": \"rudy1031\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/user/login",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"login"
+							],
+							"query": [
+								{
+									"key": "login",
+									"value": "goorolx",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "rudy102",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.4 loginBadPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"login\": \"John Tester\",\n\t\"password\": \"rudy10\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/user/login",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"login"
+							],
+							"query": [
+								{
+									"key": "login",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.5 postNewExistingUserWithDifferentPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"login\": \"John Tester\",\n\t\"password\": \"testtest\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/user/register",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.6 postNewUserPolish",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"login\": \"Góroliść\",\n\t\"password\": \"ródą102\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/user/register",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.7 loginUserPolish",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"login\": \"Góroliść\",\n\t\"password\": \"ródą102\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/user/login",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Items",
+			"item": [
+				{
+					"name": "3.1 postNewItem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{       \r\n\t\"userId\": 210,\r\n        \"titleId\": 405,\r\n        \"purchaseDate\": \"2020-01-01\"\r\n\t\t}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/items/",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"items",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3.2 getItems",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/items/?userId=210&titleId=405",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"items",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "210"
+								},
+								{
+									"key": "titleId",
+									"value": "405"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3.3 editItem",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"userId\": 210,\r\n\t\t\"id\": 408,\r\n        \"purchaseDate\": \"2222-06-12\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/items/",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"items",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3.4 deleteItem",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/items/?userId=210&id=408",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"items",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "210"
+								},
+								{
+									"key": "id",
+									"value": "408"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3.5 postNewItemBadDate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{       \r\n\t\"userId\": 210,\r\n        \"titleId\": 405,\r\n        \"purchaseDate\": \"2020-13-13\"\r\n\t\t}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/items/",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"items",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Rents",
+			"item": [
+				{
+					"name": "4.1 postRents",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": 210,\n\t\"itemId\": 409,\n\t\"customerName\": \"someTester\",\n\t\"rentDate\": \"2020-07-18\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/rents/",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rents",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "itemId",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4.2 getRents",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/rents/?userId=210&itemId=409",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rents",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "210"
+								},
+								{
+									"key": "itemId",
+									"value": "409"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4.3 rentAgainBeforeExpiry",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"userId\": 210,\n        \"itemId\": 409,\n        \"customerName\": \"DuplicatedTester\",\n        \"rentDate\": \"2020-07-20\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/rents/",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rents",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "147",
+									"disabled": true
+								},
+								{
+									"key": "itemId",
+									"value": "195",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4.4 editRents",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": 210,\n        \"id\": 411,\n        \"customerName\": \"edit Tester\",\n        \"rentDate\": \"2020-07-28\",\n        \"expirationDate\": \"2020-08-21\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/rents/",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rents",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "147",
+									"disabled": true
+								},
+								{
+									"key": "itemId",
+									"value": "195",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4.5 editRentsClosingRental",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": 210,\n\t\"id\": 411,\n\t\"customerName\": \"someWeirdTester\",\n\t\"rentDate\": \"2020-06-01\",\n\t\"expirationDate\": \"2020-06-19\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/rents/",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rents",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "147",
+									"disabled": true
+								},
+								{
+									"key": "itemId",
+									"value": "195",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4.6 postRentsBadDate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": 210,\n\t\"itemId\": 409,\n\t\"customerName\": \"someTester\",\n\t\"rentDate\": \"2020-99-18\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/rents/",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rents",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "147",
+									"disabled": true
+								},
+								{
+									"key": "itemId",
+									"value": "195",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
