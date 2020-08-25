@@ -11,5 +11,5 @@ Request collection is attached.
 https://docs.google.com/spreadsheets/d/1LFSvhlbA0eZH9mwSNJwv57ZQfBhUr0kxKRYtaqPQkk8/edit?usp=sharing
 
 2.
-Test Cases for simple FE app, part of kodilla course:
+Test Cases for simple FE app, part of kodilla course, this one is in polish:
 https://docs.google.com/spreadsheets/d/1C6C5rS8kbPT1m4B5HfBqnJaqrS0x3o29dz3cnEy3358/edit?usp=sharing
